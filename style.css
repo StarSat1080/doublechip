@@ -1,0 +1,112 @@
+body { 
+    background-color: whitesmoke;
+}
+h1 {
+    font-family: "Times New Roman", serif;
+    color: rgb(0, 10, 196);
+    text-align: center;
+}
+   h2 {
+    color: rgb(71, 236, 129);
+    ;
+}
+p {
+    color: black;
+    font-size: 18px;
+} 
+.my-button {
+    background-color: #2b2c2d; /* Цвет фона */
+    color: white;              /* Цвет текста */
+    padding: 10px 20px;       /* Отступы */
+    border-radius: 5px;       /* Закругление углов */
+    cursor: pointer;          /* Курсор при наведении */
+    transition: background 0.3s; /* Плавный эффект */
+}
+.my-button:hover {
+    background-color: #1a1b1c; /* Цвет фона при наведении */
+}
+/* Стили для бегущей строки */
+.marquee-block {
+  width: 100%;            /* Ширина блока */
+  overflow: hidden;       /* Прячем текст, который выходит за границы */
+  background: yellow;         /* Цвет фона */
+  color: rgb(6, 14, 179);
+  padding: 10px 0;         /* Вертикальные отступы */
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;    /* Запрещаем перенос строки */
+  padding-left: 100%;     /* Начальная точка за правой границей */
+  animation: scroll-text 20s linear infinite; /* Название, время, тип, повтор */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+@keyframes scroll-text {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+/* Остановка при наведении курсора */
+.marquee-block:hover .marquee-text {
+  animation-play-state: paused; 
+}
+/* Стили для контейнера и блоков */
+.container {
+  display: flex;       /* Включаем режим гибких блоков */
+  gap: 20px;           /* Равный отступ МЕЖДУ блоками */
+  padding: 10px;       /* Внутренний отступ самого контейнера */
+}
+
+.box {
+  flex: 1;             /* Заставляет блоки быть одинаковой ширины (50/50) */
+  height: 500px;       /* Фиксированная высота для всех блоков */
+  background-color: #fdfefe; /* Цвет фона для блоков */
+  color: rgb(0, 0, 0); /* Цвет текста для блоков */
+  display: flex; /* Включаем режим гибких блоков для выравнивания содержимого */
+  flex-direction: column; /* Располагаем содержимое вертикально */
+  align-items: center; /* Выравнивание по горизонтали по центру */
+  justify-content: center;  /* Выравнивание по вертикали по центру */
+  border-radius: 8px;  /* Закругление углов для эстетики */
+}
+.box h1 {
+  margin: 0;           /* Убираем отступы у заголовков внутри блоков */
+}
+/* для ФОРМИ */
+.upload-form {
+  display: flex;   /* Включаем режим гибких блоков */
+  flex-direction: column;
+  gap: 15px;
+  max-width: 350px;
+  padding: 20px;
+  border: 2px dashed #3498db;
+  border-radius: 12px;
+  font-family: sans-serif;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input[type="file"] {
+  background: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}

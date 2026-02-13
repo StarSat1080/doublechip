@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prise zoo</title>
+</head>
+<body>
+    <div class="marquee-block">
+        <div class="marquee-text">Термінове виготовлення дубліката мікрочипа для тварин!</div>
+</div>
+
+    <div class="container">
+        <div class="box">
+            <h1>Загубили мікрочип?</h1>
+            <p>Не хвилюйтеся! Ми пропонуємо швидке та надійне виготовлення дубліката мікрочипа для вашого улюбленця. Просто заповніть форму нижче, і ми зв'яжемося з вами для подальших кроків.</p>
+        </div>
+        <div class="box">
+            <h1>Заповніть форму:</h1>
+                <form class="upload-form" action="#" method="post">
+                    <form id="tgForm">
+                   <input type="text" name="owner-name" placeholder="Призвище" required>
+                <input type="text" name="pet-name" placeholder="Ім'я" required>
+                <input type="text" name="chip-number" placeholder="Номер мікрочипа" required>
+
+
+                <label for="photo">Завантажте фото документа:</label>
+  <!-- Атрибут accept ограничивает выбор только картинками -->
+  <input type="file" id="photo" name="user_photo" accept="image/*">
+
+                  <p>Інформація для відправлення:</p>
+                <input type="text" name="chip-number" placeholder="Номер телефону" required>
+                <input type="text" name="chip-number" placeholder="Номер відділення\поштомату\індекс" required>
+                <button type="submit" class="my-button">Відправити заявку</button>
+</form>
+        </div>
+    </div>
+    <!-- Обычно подключают перед закрывающим тегом </body> -->
+<script src="script.js"></script>
+</body>
+</html>
