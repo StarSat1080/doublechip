@@ -1,6 +1,6 @@
 const TOKEN = "7838429220:AAFbI-o3FdRHuCwdfcdTpnrLgg5scwUehtg";
-const CHAT_ID = "5243056355";
-const URI_API = `https://api.telegram.org{7838429220:AAFbI-o3FdRHuCwdfcdTpnrLgg5scwUehtg}/sendDocument`;
+const CHAT_ID = "-5141603703";
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendDocument`;
 
 document.getElementById('tgForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -15,7 +15,7 @@ document.getElementById('tgForm').addEventListener('submit', function(e) {
     formData.append('chat_id', CHAT_ID);
     formData.append('document', fileInput.files[0]);
     // Текст из формы добавляем в подпись к файлу (caption)
-    formData.append('caption', `Имя: ${this.name.value}`);
+    formData.append('caption', `Призвище: ${this['Last-name'].value}, Ім'я: ${this.Name.value}`);
     formData.append('parse_mode', 'html');
 
     fetch(URI_API, {
