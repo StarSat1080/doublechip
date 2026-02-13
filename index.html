@@ -18,22 +18,20 @@
         </div>
         <div class="box">
             <h1>Заповніть форму:</h1>
-                <form class="upload-form" action="#" method="post">
-                    <form id="tgForm">
-                   <input type="text" name="owner-name" placeholder="Призвище" required>
-                <input type="text" name="pet-name" placeholder="Ім'я" required>
+            <form class="upload-form" action="#" method="post">
+                <input type="text" name="Last-name" placeholder="Призвище" required>
+                <input type="text" name="Name" placeholder="Ім'я" required>
                 <input type="text" name="chip-number" placeholder="Номер мікрочипа" required>
-
-
                 <label for="photo">Завантажте фото документа:</label>
-  <!-- Атрибут accept ограничивает выбор только картинками -->
-  <input type="file" id="photo" name="user_photo" accept="image/*">
+                <!-- Атрибут accept ограничивает выбор только картинками -->
+                  <input type="file" name="document" id="fileInput">
 
                   <p>Інформація для відправлення:</p>
-                <input type="text" name="chip-number" placeholder="Номер телефону" required>
-                <input type="text" name="chip-number" placeholder="Номер відділення\поштомату\індекс" required>
+                <input type="text" name="Phone-number" placeholder="Номер телефону" required>
+                <input type="text" name="Post-office" placeholder="Номер відділення\поштомату\індекс" required>
+
                 <button type="submit" class="my-button">Відправити заявку</button>
-</form>
+            </form>
         </div>
     </div>
     <!-- Обычно подключают перед закрывающим тегом </body> -->
