@@ -1,9 +1,9 @@
-const TOKEN = "bot7838429220:AAFbI-o3FdRHuCwdfcdTpnrLgg5scwUehtg";
-const CHAT_ID = "-5141603703";
-const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+const TOKEN = "7838429220:AAFbI-o3FdRHuCwdfcdTpnrLgg5scwUehtg";
+const CHAT_ID = "5243056355";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendDocument`;
 
-document.getElementById('tgForm').addEventListener('submit', function(e) {
+
+document.getElementById('tgForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const fileInput = document.getElementById('fileInput');
@@ -21,12 +21,12 @@ document.getElementById('tgForm').addEventListener('submit', function(e) {
 
     fetch(URI_API, {
         method: 'POST',
-        body: formData 
+        body: formData
     })
-    .then(res => res.json())
-    .then(data => {
-        if (data.ok) alert('Файл успешно отправлен!');
-        else alert('Ошибка API: ' + data.description);
-    })
-    .catch(err => alert('Ошибка сети!'));
+        .then(res => res.json())
+        .then(data => {
+            if (data.ok) alert('Файл успешно отправлен!');
+            else alert('Ошибка API: ' + data.description);
+        })
+        .catch(err => alert('Ошибка сети!'));
 });
