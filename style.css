@@ -12,18 +12,42 @@ h1 {
 }
 p {
     color: black;
-    font-size: 18px;
+    font-size: 16px;
 } 
 .my-button {
-    background-color: #2b2c2d; /* Цвет фона */
-    color: white;              /* Цвет текста */
+    background-color: #2efb3c; /* Цвет фона */
+    color: rgb(4, 34, 166);              /* Цвет текста */
+    font-size: 26px;
+    font-style: italic ;
+    font-family: var(.my-button);
+    lighting-color: aqua;
     padding: 10px 20px;       /* Отступы */
-    border-radius: 5px;       /* Закругление углов */
+    border-radius: 3%;       /* Закругление углов */
     cursor: pointer;          /* Курсор при наведении */
     transition: background 0.3s; /* Плавный эффект */
 }
+кнопка телеграм
+.button {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 
+    inset 0 -5px 10px rgba(0,0,0,0.1), /* Внутренняя тень снизу */
+    0 10px 20px rgba(0,0,0,0.2);      /* Внешняя тень под кнопкой */
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.icon-part {
+  background: #24A1DE; /* Фирменный цвет Telegram */
+  border-radius: 20px;
+  box-shadow: inset 0 4px 4px rgba(255,255,255,0.5); /* Блик сверху */
+}
+
+
 .my-button:hover {
-    background-color: #1a1b1c; /* Цвет фона при наведении */
+    background-color: aquamarine; /* Цвет фона при наведении */
 }
 /* Стили для бегущей строки */
 .marquee-block {
@@ -73,33 +97,9 @@ p {
 .box h1 {
   margin: 0;           /* Убираем отступы у заголовков внутри блоков */
 }
-/* для ФОРМИ */
-.upload-form {
-  display: flex;   /* Включаем режим гибких блоков */
-  flex-direction: column;
-  gap: 15px;
-  max-width: 350px;
-  padding: 20px;
-  border: 2px dashed #3498db;
-  border-radius: 12px;
-  font-family: sans-serif;
-}
-
-label {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-input[type="file"] {
-  background: #f8f9fa;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
 button {
-  background-color: #3498db;
+  background-color: #3498db; 
   color: white;
   padding: 12px;
   border: none;
@@ -108,5 +108,100 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #78b929;
+}
+
+
+/* КНОПКА Телеграм ФИН
+
+/* Стили для 3D Telegram кнопки */
+.tg-button-3d {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: 40px; /* Скругление как на фото */
+    padding: 6px 30px 6px 6px;
+    margin-top: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 
+                inset 0 -4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Блок с иконкой с эффектом стеклянного блика */
+.tg-icon-box {
+    position: relative; /* Для позиционирования блика */
+    width: 60px;
+    height: 60px;
+    background: #24A1DE; /* Основной цвет Telegram */
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Чтобы блик не выходил за края */
+    margin-right: 15px;
+    box-shadow: 
+        inset 0 -4px 6px rgba(0, 0, 0, 0.2), /* Глубокая тень снизу */
+        0 4px 10px rgba(36, 161, 222, 0.3);
+}
+
+/* Тот самый стеклянный блик сверху */
+.tg-icon-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Занимает верхнюю половину */
+    background: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.5) 0%, 
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    border-radius: 18px 18px 50% 50%; /* Скругление снизу для эффекта линзы */
+}
+
+/* Иконка самолетика (поднимаем слой над бликом) */
+.tg-icon-box svg {
+    position: relative;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    fill: white;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+/* Дополнительный блеск всей кнопке при наведении */
+.tg-button-3d:hover .tg-icon-box {
+    filter: brightness(1.05);
+}
+
+.tg-text {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+/* Эффекты при наведении */
+/* Состояние при наведении (кнопка чуть приподнимается) */
+.tg-button-3d:hover {
+    transform: translateY(-4px); /* Подъем вверх */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 
+                inset 0 -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Состояние при клике (кнопка "вжимается") */
+.tg-button-3d:active {
+    transform: translateY(2px); /* Смещение вниз */
+    /* Тень становится короче и бледнее, имитируя близость к поверхности */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                inset 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.1s, box-shadow 0.1s; /* Быстрая реакция на клик */
+}
+
+/* Плавный возврат в исходное состояние */
+.tg-button-3d {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
